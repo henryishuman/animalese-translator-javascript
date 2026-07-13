@@ -5,10 +5,10 @@ cd "$LOCAL_DIR" || exit
 
 find . -type f \
   ! -path "*/.git/*" \
-  ! -path "README.md" \
-  ! -path "output.wav" \
-  ! -path "preview.jpg" \
-  ! -path "deploy_to_neocities.sh" | while read -r file; do
+  ! -name "README.md" \
+  ! -name "output.wav" \
+  ! -name "preview.jpg" \
+  ! -name "deploy_to_neocities.sh" | while read -r file; do
 
     remote_path="${file#./}"
 
